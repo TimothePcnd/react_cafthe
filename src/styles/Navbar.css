@@ -1,0 +1,55 @@
+
+a{
+    text-decoration: none;
+    color: black;
+
+}
+
+li {
+    padding: 15px;
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.left-ul {
+    list-style: none;
+    display: flex;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.left-ul li {
+    margin: 15px;
+}
+
+
+.title-nav {
+    font-size: 30px;
+}
+
+.right-ul {
+    list-style: none;
+    display: flex;
+    margin-right: 80px;
+}
+
+.right-ul li {
+    margin: 10px;
+}
+
+.login-nav {
+    background: black;
+    text-align: center;
+}
+
+.login-nav a {
+    color: whitesmoke;
+    padding: 25px;
+
+}
+
