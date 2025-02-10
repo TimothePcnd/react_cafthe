@@ -1,0 +1,14 @@
+.product-list {
+    display: ruby;
+}
+
+.product-card {
+    margin: 20px;
+    padding: 10px;
+    background-color: #bebebb;
+    border-radius: 10px;
+    width: 200px;
+    text-align: center;
+    border: 3px solid black;
+
+}
