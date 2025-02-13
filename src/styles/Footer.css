@@ -1,0 +1,29 @@
+footer {
+    grid-column: span 4;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background: white;
+    padding: 40px;
+    border-top: 1px solid black;
+}
+
+.footer div {
+    padding: 10px;
+    display: flex;
+}
+
+.footer h4 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.footer p, .footer a {
+    font-size: 14px;
+    color: grey;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 5px;
+}
+
+
+

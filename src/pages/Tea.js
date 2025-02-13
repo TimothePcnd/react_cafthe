@@ -49,11 +49,15 @@ function Tea(props) {
 
     return (
         <div>
-            <h3>Liste des cafés</h3>
-            <div className={"product-list"}>
+            <div className="hero">
+                <img src="hero-image.jpg" alt="Bouquet de fleurs"/>
+                <h1>Fresh Flowers</h1>
+            </div>
+
+            <div className={"product-card"}>
                 {teas.map((produit) => (
                     <div>
-                        <ProductCard key={produit.id_produit} produit={produit} />
+                        <ProductCard key={produit.id_produit} produit={produit}/>
                     </div>
                 ))}
 

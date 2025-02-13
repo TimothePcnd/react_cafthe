@@ -1,31 +1,6 @@
-@import "Global.css";
-
-.line-header {
-    border: 1px solid black;
 
 
-}
-
-.ul-header {
-    list-style: none;
-    display: flex;
-    justify-content: end;
-
-}
-
-.offres {
-    border-left: 1px solid black;
-}
-
-.offres a {
-    padding: 10px;
-}
-
-.news {
-    background: black;
-}
-
-.news a {
-    color: whitesmoke;
-    padding: 10px;
+.card-header {
+    background: #282c34;
+    width: 100px;
 }

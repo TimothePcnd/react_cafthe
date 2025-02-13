@@ -9,47 +9,54 @@ li {
     padding: 15px;
 }
 
-.nav{
+.nav-bar{
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
+    border-bottom: 1px solid black;
 }
 
-.left-ul {
+.produit {
     list-style: none;
     display: flex;
     margin-left: 10px;
     margin-right: 10px;
 }
 
-.left-ul li {
+.produit li {
     margin: 15px;
 }
 
 
 .title-nav {
     font-size: 30px;
+
 }
 
 .right-ul {
     list-style: none;
     display: flex;
     margin-right: 80px;
+    align-items: center;
 }
 
 .right-ul li {
     margin: 10px;
 }
 
-.login-nav {
-    background: black;
-    text-align: center;
-}
-
-.login-nav a {
+.btn-login-nav {
     color: whitesmoke;
-    padding: 25px;
-
+    background: black;
+    height: fit-content;
+    padding: 10px;
 }
+
+.nom-client {
+    display: flex;
+    align-items: center;
+}
+
+
+
 

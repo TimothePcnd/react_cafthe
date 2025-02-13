@@ -1,56 +1,77 @@
-import React, {useState} from 'react';
+import React, {useState, useContext} from 'react';
 import '../styles/Login.css'
 import axios from "axios";
+import {AuthContext} from "../context/AuthContext";
+import {useNavigate} from "react-router-dom";
 
 function Login(props) {
+    const { login } = useContext(AuthContext); // fonction login venant du contexte
+    const navigate = useNavigate(); //La navigation
+
     const [email, setEmail] = useState("")
     const [mdp, setMdp] = useState("")
     const [errorMsg, setErrorMsg] = useState("")
 
     const handleSubmit = async (e) => { //fonction asynchrone
         e.preventDefault();
+        setErrorMsg("")
 
         try {
             const response = await axios.post("http://localhost:3001/api/login",
                 {
-                    email,
-                    mdp,
+                    "Mail_client": email,
+                    "mdp_client": mdp,
                 },
             );
 
             const {token, client} = response.data;
-        } catch (error) {}
-    }
+
+            //On met à jour le contexte d'authentification
+            login(token, client);
+
+            // Redirection d'un client vers une page
+            navigate("/");
+        } catch (error) {
+            console.error("Erreur lors de la connexion", error);
+            if (error.response.data.message){
+                setErrorMsg(error.response.data.message);
+            } else {
+                setErrorMsg("Erreur");
+            }
+        }
+    };
 
     return (
-        <div className={"form-bg"}>
-            <h2>Connexion</h2>
-                <form onSubmit={handleSubmit}>
-                    <ul>
 
-                        <li>
+        <div className={"container"}>
+            <div className={"form-bg"}>
+                <h2>CONNEXION</h2>
+                    <form onSubmit={handleSubmit}>
+                        <ul>
 
-                            <label htmlFor="mail">Email&nbsp;:</label>
-                            <input type="email"
-                                   value={email}
-                                   onChange={(e) => setEmail(e.target.value)}
-                                   required style={{width: "100%"}} />
-                        </li>
+                            <li>
 
-                        <li>
-                            <label htmlFor="name">Password&nbsp;:</label>
-                            <input type="password"
-                                   value={mdp}
-                                   onChange={(e) => setMdp(e.target.value)}
-                                   required style={{width: "100%"}} />
-                        </li>
+                                <label htmlFor="mail">Email</label>
+                                <input type="email"
+                                       value={email}
+                                       onChange={(e) => setEmail(e.target.value)}
+                                        />
+                            </li>
 
-                        <li>
-                            <button type="submit">Connexion</button>
-                        </li>
+                            <li>
+                                <label htmlFor="name">Password</label>
+                                <input type="password"
+                                       value={mdp}
+                                       onChange={(e) => setMdp(e.target.value)}
+                                       />
+                            </li>
 
-                    </ul>
-                </form>
+                                {errorMsg && (<div>{errorMsg}</div>)} {/*Structure conditionnel*/}
+                                <button type="submit">Connexion</button>
+
+                        </ul>
+                    </form>
+            </div>
         </div>
     );
 }

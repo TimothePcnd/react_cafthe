@@ -1,29 +1,55 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import {Link} from "react-router-dom";
 import '../styles/Navbar.css';
+import {AuthContext} from "../context/AuthContext";
 
 
 function Navbar(props) {
+    const {user, isAuthenticated, logout} = useContext(AuthContext);
+    const handleLogout = () => {
+        logout();
+    }
+
     return (
-        <div className={"nav"}>
+            <nav className="nav-bar">
 
 
-            <ul className={"left-ul"}>
-                <li><Link to={`/produits/cafes`}>CAFÉ</Link></li>
-                <li><Link to={`/produits/thes`}>THÉ</Link></li>
-                <li><Link to={`/produits/accessoires`}>ACCESSOIRE</Link></li>
-                <li><Link to={`/produits/accessoires`}>A PROPOS</Link></li>
-            </ul>
 
-            <a className={"title-nav"} href={"/"}>[ CAFTHÉ ]</a>
+                <ul className="produit">
+                    <li><Link to={`/produits/cafes`}>Café</Link></li>
+                    <li><Link to={`/produits/thes`}>Thé</Link></li>
+                    <li><Link to={`/produits/accessoires`}>Accessoires</Link></li>
+                </ul>
 
-            <ul className={"right-ul"}>
-                <li>LATEAM</li>
-                <li>BOGOSSE</li>
-                <li className={"login-nav"}><Link to={`/login`}>LOGIN</Link></li>
-            </ul>
+                <div className={"title-nav"}><Link to={`/`}>[ CAFTHÉ ]</Link></div>
 
-        </div>
+                <ul className="right-ul">
+                    <li>Search</li>
+                    <li><Link to="/Panier" className="link-nav">Panier</Link></li>
+                    {isAuthenticated ? (
+                        <>
+                            <button className="btn-logout" onClick={handleLogout}>Se déconnecter</button></>
+                    ): (
+                        <Link className="btn-login-nav" to='/login'>Se connecter</Link>
+                    )}
+                    <div className={"nom-client"}>
+                    {isAuthenticated ? (
+                        <>
+                            <span>Bonjour {user.nom}{user.prenom}</span>
+                        </>
+                    ): (
+                        ""
+                    )}
+                </div>
+                </ul>
+
+            </nav>
+
+
+
+
+
+
     );
 }
 

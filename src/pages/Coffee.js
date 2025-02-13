@@ -48,7 +48,7 @@ function Coffee(props) {
     //console.log(coffees)
 
     return (
-        <div>
+        <div className={""}>
             <h3>Liste des cafés</h3>
             <div className={"product-list"}>
                 {coffees.map((produit) => (
