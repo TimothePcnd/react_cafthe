@@ -7,7 +7,6 @@ import "react-loading-skeleton/dist/skeleton.css";
 function ProductList(props) {
         const [produits, setProduits] = useState([]);
         const [isLoading, setIsLoading] = useState(true);
-
         useEffect(() => {
             const fetchProduits = async () => {
                 try {

@@ -28,7 +28,9 @@ function Navbar(props) {
                     <li><Link to="/Panier" className="link-nav">Panier</Link></li>
                     {isAuthenticated ? (
                         <>
-                            <button className="btn-logout" onClick={handleLogout}>Se déconnecter</button></>
+                            <button className="btn-logout"><Link to={"/account"}>Mon compte</Link></button>
+                            <button className="btn-logout">Se déconnecter</button>
+                            </>
                     ): (
                         <Link className="btn-login-nav" to='/login'>Se connecter</Link>
                     )}
@@ -42,6 +44,7 @@ function Navbar(props) {
                     )}
                 </div>
                 </ul>
+
 
             </nav>
 

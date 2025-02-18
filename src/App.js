@@ -9,6 +9,7 @@ import Tea from "./pages/Tea";
 import Accessories from "./pages/Accessory";
 import {AuthProvider} from "./context/AuthContext";
 import Login from "./pages/Login";
+import Account from "./pages/Account";
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
                       <Route path={"produits/thes"} element={<Tea/>} />
                       <Route path={"produits/accessoires"} element={<Accessories/>} />
                       <Route path={"login"} element={<Login />}/>
+                      <Route path={"account"} element={<Account/>}/>
                   </Route>
               </Routes>
           </Router>
