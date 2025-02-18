@@ -29,20 +29,12 @@ function Navbar(props) {
                     {isAuthenticated ? (
                         <>
                             <button className="btn-logout"><Link to={"/account"}>Mon compte</Link></button>
-                            <button className="btn-logout">Se déconnecter</button>
+                            <button className="btn-logout" onClick={handleLogout}>Se déconnecter</button>
+                            <div className={"nom-client"}>Bonjour {user.nom}{user.prenom}</div>
                             </>
                     ): (
                         <Link className="btn-login-nav" to='/login'>Se connecter</Link>
                     )}
-                    <div className={"nom-client"}>
-                    {isAuthenticated ? (
-                        <>
-                            <span>Bonjour {user.nom}{user.prenom}</span>
-                        </>
-                    ): (
-                        ""
-                    )}
-                </div>
                 </ul>
 
 
