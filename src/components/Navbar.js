@@ -13,8 +13,6 @@ function Navbar(props) {
     return (
             <nav className="nav-bar">
 
-
-
                 <ul className="produit">
                     <li><Link to={`/produits/cafes`}>Café</Link></li>
                     <li><Link to={`/produits/thes`}>Thé</Link></li>
@@ -39,11 +37,6 @@ function Navbar(props) {
 
 
             </nav>
-
-
-
-
-
 
     );
 }

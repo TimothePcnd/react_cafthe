@@ -10,6 +10,7 @@ import Accessories from "./pages/Accessory";
 import {AuthProvider} from "./context/AuthContext";
 import Login from "./pages/Login";
 import Account from "./pages/Account";
+import Command from "./pages/Command";
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
                       <Route path={"produits/accessoires"} element={<Accessories/>} />
                       <Route path={"login"} element={<Login />}/>
                       <Route path={"account"} element={<Account/>}/>
+                      <Route path={"/commande/client/:id"} element={<Command />} />
                   </Route>
               </Routes>
           </Router>

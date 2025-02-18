@@ -103,6 +103,9 @@ function Account(props) {
                 <input type="text" placeholder={"Nouveau mot de passe"} onChange={(e) => setInputChangeAdresse(e.target.value)} />
                 <button type="submit" className="btn-profil">Modifier</button>
             </form>
+
+            <Link to={`/commande/client/:id`} className={"details-btn"}>Voir les commandes</Link>
+
         </div>
     );
 }
