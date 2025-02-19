@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import axios from "axios";
 import ProductCard from "../components/ProductCard";
+import {Link} from "react-router-dom";
 
 function Command() {
 
@@ -23,14 +24,17 @@ function Command() {
 
         void fetchCommand();
     }, []);
-
+console.log(command)
     return (
         <div>
             <h3>Historique des commandes</h3>
             <div>
                 {command.map((commande) => (
-                    <div>
-                        <ProductCard key={commande.id_commande} produit={commande} />
+                    <div className={"box-commande"}>
+                        <p>Date de la commande : {commande.Date_prise_commande}</p>
+                        <p>Statut de la commande : {commande.statut_commande}</p>
+                        <p>Montant TTC de la commande : {commande.montant_ttc} €</p>
+                        <Link to={`/commande/:id`} className={"details-btn"}>Voir le détail</Link>
                     </div>
                 ))}
 
