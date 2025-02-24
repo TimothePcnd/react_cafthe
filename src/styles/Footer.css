@@ -1,7 +1,7 @@
 footer {
     grid-column: span 4;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     background: white;
     padding: 40px;
 }

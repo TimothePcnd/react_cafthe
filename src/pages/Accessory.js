@@ -49,7 +49,7 @@ function Accessory(props) {
 
     return (
         <div>
-            <h3>Liste des cafés</h3>
+            <h3>Liste des accessoires</h3>
             <div className={"product-list"}>
                 {accessories.map((produit) => (
                     <div>

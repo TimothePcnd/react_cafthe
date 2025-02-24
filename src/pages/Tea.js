@@ -49,18 +49,25 @@ function Tea(props) {
 
     return (
         <div>
-            <div className="hero">
-                <img src="hero-image.jpg" alt="Bouquet de fleurs"/>
-                <h1>Fresh Flowers</h1>
+            <div className={"top-page"}>
+                    <div className={"white"}><p>NOS THÉS</p></div>
+                    <div className={"grey"}><p>NOS THÉS</p></div>
+                    <div className={"black"}><p>NOS THÉS</p></div>
+
             </div>
 
-            <div className={"product-card"}>
-                {teas.map((produit) => (
-                    <div>
-                        <ProductCard key={produit.id_produit} produit={produit}/>
-                    </div>
-                ))}
+            <div className={"middle-page"}>
+                <div className={"filtre-content"}>
+                    <h3>Trier par</h3>
+                </div>
 
+                        <div className={"product-card"}>
+                            {teas.map((produit) => (
+                                <div>
+                                    <ProductCard key={produit.id_produit} produit={produit}/>
+                                </div>
+                            ))}
+                        </div>
             </div>
         </div>
     );

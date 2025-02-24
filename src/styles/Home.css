@@ -71,7 +71,10 @@
     display: grid;
     grid-auto-rows: minmax(50px, auto);
     align-items: center;
-    justify-items: center
+    justify-items: center;
+    gap: 25px;
+    margin-left: 75px;
+    width: 1300px;
 
 }
 

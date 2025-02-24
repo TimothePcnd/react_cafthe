@@ -1,1 +1,42 @@
+.top-page {
+    margin: 0;
+    width: 1440px;
+    height: 237px;
+    flex-shrink: 0;
+    background: radial-gradient(50% 50% at 50% 50%, #C67340 0%, #FF2E07 100%);
+    border-bottom: 1px solid black;
+}
+
+.top-page p {
+    font-family: "LEMON MILK";
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.white {
+    color: #f5f5f5;
+    margin-left: 10px;
+    margin-bottom: -33px;
+}
+
+
+.grey {
+    margin-left: 10px;
+    color: #D3D0CB;
+}
+
+.black {
+    color: #1E1E1E;
+    margin-left: 10px;
+    margin-top: -33px;
+}
+
+.product-card {
+    display: grid;
+    grid-auto-rows: minmax(50px, auto);
+    align-items: center;
+    justify-items: center
+}
 
