@@ -4,7 +4,6 @@ footer {
     grid-template-columns: repeat(4, 1fr);
     background: white;
     padding: 40px;
-    border-top: 1px solid black;
 }
 
 .footer div {
@@ -24,6 +23,7 @@ footer {
     display: block;
     margin-bottom: 5px;
 }
+
 
 
 

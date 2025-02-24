@@ -24,7 +24,6 @@ function Command() {
 
         void fetchCommand();
     }, []);
-console.log(command)
     return (
         <div>
             <h3>Historique des commandes</h3>

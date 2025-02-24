@@ -11,6 +11,8 @@ import {AuthProvider} from "./context/AuthContext";
 import Login from "./pages/Login";
 import Account from "./pages/Account";
 import Command from "./pages/Command";
+import detailCommand from "./pages/DetailCommand";
+import DetailCommand from "./pages/DetailCommand";
 
 
 function App() {
@@ -27,6 +29,7 @@ function App() {
                       <Route path={"login"} element={<Login />}/>
                       <Route path={"account"} element={<Account/>}/>
                       <Route path={"/commande/client/:id"} element={<Command />} />
+                      <Route path={"/commande/:id"} element={<DetailCommand />} />
                   </Route>
               </Routes>
           </Router>

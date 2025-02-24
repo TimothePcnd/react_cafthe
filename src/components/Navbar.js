@@ -28,7 +28,6 @@ function Navbar(props) {
                         <>
                             <button className="btn-logout"><Link to={"/account"}>Mon compte</Link></button>
                             <button className="btn-logout" onClick={handleLogout}>Se déconnecter</button>
-                            <div className={"nom-client"}>Bonjour {user.nom}{user.prenom}</div>
                             </>
                     ): (
                         <Link className="btn-login-nav" to='/login'>Se connecter</Link>
@@ -37,6 +36,8 @@ function Navbar(props) {
 
 
             </nav>
+
+
 
     );
 }
