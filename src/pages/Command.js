@@ -33,7 +33,7 @@ function Command() {
                         <p>Date de la commande : {commande.Date_prise_commande}</p>
                         <p>Statut de la commande : {commande.statut_commande}</p>
                         <p>Montant TTC de la commande : {commande.montant_ttc} €</p>
-                        <Link to={`/commande/:id`} className={"details-btn"}>Voir le détail</Link>
+                        <Link to={`/commande/${commande.id_commande}`} className={"details-btn"}>Voir le détail</Link>
                     </div>
                 ))}
 
