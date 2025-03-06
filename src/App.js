@@ -13,6 +13,7 @@ import Account from "./pages/Account";
 import Command from "./pages/Command";
 import detailCommand from "./pages/DetailCommand";
 import DetailCommand from "./pages/DetailCommand";
+import Register from "./pages/Register";
 
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
                       <Route path={"account"} element={<Account/>}/>
                       <Route path={"/commande/client/:id"} element={<Command />} />
                       <Route path={"/commande/:id"} element={<DetailCommand />} />
+                      <Route path={"/client/register"} element={<Register />} />
                   </Route>
               </Routes>
           </Router>

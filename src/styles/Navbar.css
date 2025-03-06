@@ -10,6 +10,7 @@ li {
 }
 
 .nav-bar{
+    font-family: Vogue;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -24,10 +25,13 @@ li {
 }
 
 
-
 .title-nav {
     font-size: 30px;
+}
 
+.title-nav::before {
+    content: "[ CAFTHÉ ]";
+    background-color: #ffba10;
 }
 
 .right-ul {

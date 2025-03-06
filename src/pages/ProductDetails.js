@@ -22,11 +22,11 @@ function ProductDetails() {
     return (
         <div className={"product-details"}>
             {/*Img*/}
-            <h3>Désignation: {produit.designation_produit}</h3>
-            <p>Prix: {produit.prix_ht_produit} €</p>
-            <p>Description: {produit.description_produit}</p>
-            <p>Conditionnement: {produit.Type_conditionnement}</p>
-            <Link to={`/`} className={"details-btn"}>Retour dans le passé</Link>
+            <h3>Désignation : {produit.designation_produit}</h3>
+            <p>Prix : {produit.prix_ht_produit} €</p>
+            <p>Description : {produit.description_produit}</p>
+            <p>Conditionnement : {produit.Type_conditionnement}</p>
+            <Link to={`/`} className={"details-btn"}>Retour</Link>
         </div>
     );
 }

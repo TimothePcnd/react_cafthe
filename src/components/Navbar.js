@@ -19,7 +19,7 @@ function Navbar(props) {
                     <li><Link to={`/produits/accessoires`}>Accessoires</Link></li>
                 </ul>
 
-                <div className={"title-nav"}><Link to={`/`}>[ CAFTHÉ ]</Link></div>
+                <div className={"title-nav"}><Link to={`/`}></Link></div>
 
                 <ul className="right-ul">
                     <li>Search</li>
