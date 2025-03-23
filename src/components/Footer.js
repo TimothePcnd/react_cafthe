@@ -8,22 +8,39 @@ function Footer(props) {
             <div className={"Container"}>
                 <div className={"section1"}>
                     <h3>Contact</h3>
-                    <p>10 Av de la République, Blois</p>
-                    <p>+33 600000000</p>
+                    <ul className={"list-section"}>
+                        <li><p>10 Av de la République, Blois</p></li>
+                        <li><p>+33 600000000</p></li>
+                    </ul>
+
+
                 </div>
+
                 <div className={"section2"}>
-                    <h3>Shop</h3>
-                        <p><Link to={`/produits/cafes`}>Café</Link></p>
-                        <p><Link to={`/produits/thes`}>Thé</Link></p>
-                        <p><Link to={`/produits/accessoires`}>Accessoires</Link></p>
+                    <h3>Page du site</h3>
+                    <ul className={"list-section"}>
+                        <li><p><Link to={`/produits/cafes`}>Café</Link></p></li>
+                        <li><p><Link to={`/produits/thes`}>Thé</Link></p></li>
+                        <li><p><Link to={`/produits/accessoires`}>Accessoires</Link></p></li>
+                    </ul>
+
                 </div>
+
                 <div className={"section3"}>
                     <h3>Sécurité Confidentialité</h3>
-                    <p>Mentions légales</p>
-                    <p>Conditions générales de vente</p>
+                    <ul className={"list-section"}>
+                        <li><p>Mentions légales</p></li>
+                        <li><p>Conditions générales de vente></p></li>
+                    </ul>
+
+
                 </div>
+
             </div>
-                <p className={"title-footer"}>cafthé</p>
+
+            <div className={"img-footer"}>
+                <img src={"caftheFooter.png"} alt={"CAFTHÉ"}></img>
+            </div>
         </footer>
     );
 }

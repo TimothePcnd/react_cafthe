@@ -19,23 +19,19 @@ footer p, a {
 }
 
 .Container {
-    display: grid;
-    margin: 40px 75px;
+    display: flex;
 }
 
 .section1 {
-    grid-column: 1;
-    grid-row: 1;
+    width: 30%;
 }
 
 .section2 {
-    grid-column: 2;
-    grid-row: 1;
+    width: 30%;
 }
 
 .section3 {
-    grid-column: 3;
-    grid-row: 1;
+    width: 30%;
 }
 
 .title-footer {
@@ -43,12 +39,20 @@ footer p, a {
     text-align: center;
     leading-trim: both;
     text-edge: cap;
-    font-family: Vogue;
-    font-size: 416px;
+    font-family: "LEMON MILK Bold";
+    font-size: 316px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
     letter-spacing: 8.32px;
+}
+
+.list-section {
+    list-style: none;
+}
+
+.img-footer img{
+    width: 99vw;
 }
 
 
