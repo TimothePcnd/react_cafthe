@@ -1,20 +1,19 @@
-
-a{
+nav a {
     text-decoration: none;
-    color: black;
-
+    color: #1E1E1E;
 }
 
-li {
-    padding: 0px 15px;
+.li-navbar {
+    padding: 0 15px;
 }
 
-.nav-bar{
+.navbar{
     font-family: Vogue;
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid black;
+
 }
 
 .produit {
@@ -25,14 +24,6 @@ li {
 }
 
 
-.title-nav {
-    font-size: 30px;
-}
-
-.title-nav::before {
-    content: "[ CAFTHÉ ]";
-    background-color: #ffba10;
-}
 
 .right-ul {
     list-style: none;
@@ -47,7 +38,7 @@ li {
 
 .btn-login-nav {
     color: whitesmoke;
-    background: black;
+    background: #1E1E1E;
     height: fit-content;
     padding: 10px;
 }
