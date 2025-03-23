@@ -11,7 +11,7 @@ function Tea(props) {
     useEffect(() => {
         const fetchTeas = async () => {
             try {
-                const response = await axios.get("http://localhost:3001/api/produits/thes");
+                const response = await axios.get(`${process.env.REACT_APP_API_URL}/api/produits/thes`);
                 setTeas(response.data);
             } catch (error) {
                 console.error("Erreur de chargement des produits", error);
@@ -49,7 +49,7 @@ function Tea(props) {
 
     return (
         <div>
-            <div className={"top-page"}>
+            <div className={"top-pageTea"}>
                     <div className={"white"}><p>NOS THÉS</p></div>
                     <div className={"grey"}><p>NOS THÉS</p></div>
                     <div className={"black"}><p>NOS THÉS</p></div>
@@ -61,7 +61,7 @@ function Tea(props) {
                     <h3>Trier par</h3>
                 </div>
 
-                        <div className={"product-card"}>
+                        <div className={"product-list"}>
                             {teas.map((produit) => (
                                 <div>
                                     <ProductCard key={produit.id_produit} produit={produit}/>
@@ -69,6 +69,7 @@ function Tea(props) {
                             ))}
                         </div>
             </div>
+
         </div>
     );
 }
