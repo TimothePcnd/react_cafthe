@@ -9,7 +9,16 @@ footer h4 {
     font-size: 16px;
 }
 
-footer p, a {
+footer a{
+    font-family: "Inria Sans";
+    font-size: 14px;
+    color: grey;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 5px;
+}
+
+footer p{
     font-family: "Inria Sans";
     font-size: 14px;
     color: grey;
