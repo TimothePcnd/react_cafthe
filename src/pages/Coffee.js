@@ -11,7 +11,7 @@ function Coffee(props) {
     useEffect(() => {
         const fetchCoffees = async () => {
             try {
-                const response = await axios.get("http://localhost:3001/api/produits/cafes");
+                const response = await axios.get(`${process.env.REACT_APP_API_URL}/api/produits/cafes`);
                 setCoffees(response.data);
             } catch (error) {
                 console.error("Erreur de chargement des produits", error);
@@ -48,16 +48,28 @@ function Coffee(props) {
     //console.log(coffees)
 
     return (
-        <div className={""}>
-            <h3>Liste des cafés</h3>
-            <div className={"product-list"}>
-                {coffees.map((produit) => (
-                    <div>
-                    <ProductCard key={produit.id_produit} produit={produit} />
-                    </div>
-                ))}
+        <div>
+            <div className={"top-pageCoffee"}>
+                <div className={"white"}><p>NOS CAFÉS</p></div>
+                <div className={"orange"}><p>NOS CAFÉS</p></div>
+                <div className={"black"}><p>NOS CAFÉS</p></div>
 
             </div>
+
+            <div className={"middle-page"}>
+                <div className={"filtre-content"}>
+                    <h3>Trier par</h3>
+                </div>
+
+                <div className={"product-list"}>
+                    {coffees.map((produit) => (
+                        <div>
+                            <ProductCard key={produit.id_produit} produit={produit}/>
+                        </div>
+                    ))}
+                </div>
+            </div>
+
         </div>
     );
 }

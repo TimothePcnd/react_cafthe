@@ -1,4 +1,24 @@
+.top-pageCoffee {
+    margin: 0;
+    height: 237px;
+    flex-shrink: 0;
+    background: rgba(187, 181, 174, 0.64);
+    border-bottom: 1px solid black;
+}
 
+.top-pageCoffee p {
+    font-family: "LEMON MILK";
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin: 0;
+}
+
+.orange {
+    margin-left: 10px;
+    color: #F63A11;
+}
 
 
 
