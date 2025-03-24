@@ -1,0 +1,71 @@
+.container {
+    margin: 100px 50px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.form-bg {
+    width: 50%;
+    border: 2px solid black;
+    padding: 20px;
+    background-color: white;
+    font-family: Arial, sans-serif;
+    text-transform: uppercase;
+}
+
+.title-form {
+    font-family: "LEMON MILK";
+    font-size: 50px;
+    border-bottom: 2px solid black;
+    padding-bottom: 30px;
+    margin-bottom: 20px;
+}
+
+form ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+form li {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-family: 'Inria Sans';
+    text-align: left;
+    padding-bottom: 10px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #1E1E1E;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.SeConnecter {
+    font-family: "Inria Sans";
+    font-size: 16px;
+    padding: 20px 0;
+    text-align: left;
+    text-transform: initial;
+}
+
+.SeConnecter a {
+    text-decoration: none;
+    color: #1E1E1E;
+}
+
+/* Message d'erreur */
+div.errorMsg {
+    color: red;
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 10px;
+}
