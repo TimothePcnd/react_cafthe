@@ -1,7 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import axios from "axios";
 import {Link, useParams} from "react-router-dom";
-import TtcProduit from "../components/TtcProduit";
 
 function DetailCommand() {
     const {id} = useParams();
@@ -12,7 +11,7 @@ function DetailCommand() {
     useEffect(() => {
         const fetchProduits = async () => {
             try {
-                const response = await axios.get(`http://localhost:3001/api/commande/${id}`);
+                const response = await axios.get(`${process.env.REACT_APP_API_URL}/api/commande/${id}`);
                 setDetail(response.data);
             } catch (error) {
                 console.error("Erreur de chargement de la commande", error);
@@ -37,7 +36,7 @@ function DetailCommand() {
                         <p>Désignation : {value.designation_produit}</p>
                         <p>Quantité : {value.Quantite_produit_ligne_panier}</p>
                         <p>Conditionnement : {value.designation_produit}</p>
-                        <p>Prix unitaire TTC : {TtcProduit}</p>
+                        <p>Prix unitaire TTC : {value.Prix_bitaire_produit_ligne}</p>
                         <p>Prix Total TTC: {value.Prix_unitaire_produit_ligne * value.Quantite_produit_ligne_panier} €</p>
                     </div>)
                 )}

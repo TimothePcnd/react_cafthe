@@ -24,7 +24,7 @@ function Account(props) {
 
         const fetchAccount = async () => {
             try {
-                const response = await axios.get(`http://localhost:3001/api/client/${user.id}`);
+                const response = await axios.get(`${process.env.REACT_APP_API_URL}/api/client/${user.id}`);
                 setAccount(response.data);
 
                 setInputChangeMail (response.data.Mail_client)
@@ -47,7 +47,7 @@ function Account(props) {
     const handleChangeInfo = async (e) => {
         e.preventDefault();
         try {
-            const handleChangeInfo = await axios.put(`http://localhost:3001/api/client/${user.id}`, {
+            const handleChangeInfo = await axios.put(`${process.env.REACT_APP_API_URL}/api/client/${user.id}`, {
                 "Mail_client": inputChangeMail,
                 "Telephone_client": inputChangeTelephone,
                 "adresse_client": inputChangeAdresse,
@@ -63,7 +63,7 @@ function Account(props) {
     const handleChangeMdp = async (e) => {
         e.preventDefault();
         try {
-            const handleChangeMdp = await axios.put(`http://localhost:3001/api/client/${user.id}`, {
+            const handleChangeMdp = await axios.put(`${process.env.REACT_APP_API_URL}/api/client/${user.id}`, {
                 "oldMdp": setInputChangeOldMdp,
                 "newMdp": setInputChangeNewMdp,
             });

@@ -13,7 +13,7 @@ function Command() {
     useEffect(() => {
         const fetchCommand = async () => {
             try {
-                const response = await axios.get(`http://localhost:3001/api/commande/client/${user.id}`);
+                const response = await axios.get(`${process.env.REACT_APP_API_URL}/api/commande/client/${user.id}`);
                 setCommand(response.data);
             } catch (error) {
                 console.error("Erreur de chargement des produits", error);
