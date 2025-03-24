@@ -2,7 +2,7 @@ import React, {useState, useContext} from 'react';
 import '../styles/Login.css'
 import axios from "axios";
 import {AuthContext} from "../context/AuthContext";
-import {useNavigate} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 
 function Login(props) {
     const { login } = useContext(AuthContext); // fonction login venant du contexte
@@ -17,11 +17,12 @@ function Login(props) {
         setErrorMsg("")
 
         try {
-            const response = await axios.post("http://localhost:3001/api/login",
+            const response = await axios.post(`${process.env.REACT_APP_API_URL}/api/login`,
                 {
                     "Mail_client": email,
                     "mdp_client": mdp,
                 },
+
             );
 
             const {token, client} = response.data;
@@ -45,7 +46,7 @@ function Login(props) {
 
         <div className={"container"}>
             <div className={"form-bg"}>
-                <h2>CONNEXION</h2>
+                <h2 className={"title-form"}>CONNEXION</h2>
                     <form onSubmit={handleSubmit}>
                         <ul>
 
@@ -65,11 +66,13 @@ function Login(props) {
                                        onChange={(e) => setMdp(e.target.value)}
                                        />
                             </li>
-
                                 {errorMsg && (<div>{errorMsg}</div>)} {/*Structure conditionnel*/}
-                                <button type="submit">Connexion</button>
-
+                                <button  className={"cart-button"} type="submit">Connexion</button>
                         </ul>
+
+                        <div className={"addAccount"}>
+                            <Link to={`/client/register`} className={"details-btn"}>Crée un compte</Link>
+                        </div>
                     </form>
             </div>
         </div>

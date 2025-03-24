@@ -1,43 +1,26 @@
-.container {
-    margin: 100px 50px;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-}
-
-.form-bg {
-    background: white;
-    padding: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 50%;
-}
 
 
 
-label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-
-input {
-    width: 70%;
-    border: 1px solid #ccc;
-    font-size: 14px;
-
-}
-
-button {
-    background-color: black;
-    color: white;
-    border: none;
+.addAccount {
+    font-family: "Inria Sans";
     font-size: 16px;
-    cursor: pointer;
-    transition: background 0.3s;
+    padding: 20px 0;
+    text-align: left;
+    text-transform: initial;
 }
 
-button:hover {
-    background-color: #f5f5f5;
-    color: black;
+.addAccount a {
+    text-decoration: none;
+    color: #1E1E1E;
 }
+
+.cart-footer {
+    margin-top: 20px;
+    border-top: 2px solid black;
+    padding-top: 10px;
+    text-align: right;
+    font-size: 16px;
+    font-weight: bold;
+}
+
 
