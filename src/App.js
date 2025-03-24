@@ -14,6 +14,7 @@ import Command from "./pages/Command";
 import detailCommand from "./pages/DetailCommand";
 import DetailCommand from "./pages/DetailCommand";
 import Register from "./pages/Register";
+import Cart from "./pages/Cart";
 
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
                       <Route path={"/commande/client/:id"} element={<Command />} />
                       <Route path={"/commande/:id"} element={<DetailCommand />} />
                       <Route path={"/client/register"} element={<Register />} />
+                      <Route path={"/Panier"} element={<Cart />} />
                   </Route>
               </Routes>
           </Router>
