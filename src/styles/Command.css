@@ -1,0 +1,15 @@
+.container-command {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-commande {
+    border: 1px solid black;
+    padding: 20px;
+    background-color: white;
+    font-family: "Inria Sans";
+    text-transform: uppercase;
+
+}

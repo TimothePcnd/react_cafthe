@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import axios from "axios";
 import ProductCard from "../components/ProductCard";
 import {Link} from "react-router-dom";
+import '../styles/Command.css';
 
 function Command() {
 
@@ -25,8 +26,8 @@ function Command() {
         void fetchCommand();
     }, []);
     return (
-        <div>
-            <h3>Historique des commandes</h3>
+        <div className={"container-command"}>
+            <h3 className={"title-form"}>Historique des commandes</h3>
             <div>
                 {command.map((commande) => (
                     <div className={"box-commande"}>
