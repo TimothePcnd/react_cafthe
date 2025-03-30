@@ -33,7 +33,7 @@ function Navbar(props) {
                             <button className="btn-logout" onClick={handleLogout}>Se déconnecter</button>
                             </>
                     ): (
-                        <Link className="btn-login-nav" to='/login'>Se connecter</Link>
+                        <Link to={`/login`}><button className="btn-login-nav">Se connecter</button></Link>
                     )}
                 </ul>
 
