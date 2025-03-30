@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link, useParams } from "react-router-dom";
+import '../styles/Account.css'
 
 function Account(props) {
     const user = JSON.parse(localStorage.getItem("user"));
@@ -77,35 +78,43 @@ function Account(props) {
 
 
     return (
-        <div>
-            <h3>Mon Compte</h3>
 
-            <form onSubmit={handleChangeInfo}>
-                <h4>Email</h4>
-                <p>Votre adresse mail actuelle : {account.Mail_client}</p>
-                <input type="email" value={inputChangeMail} onChange={(e) => {setInputChangeMail(e.target.value)}} />
-                <button type="submit" className="btn-profil">Modifier</button>
+        <div className={"container-account"}>
 
-                <h4>Téléphone</h4>
-                <p>Votre numéro actuel : {account.Telephone_client}</p>
-                <input type="text" value={inputChangeTelephone} onChange={(e) => setInputChangeTelephone(e.target.value)} />
-                <button type="submit" className="btn-profil">Modifier</button>
+            <div className={"account-form"}>
+                <h3>Mon Compte</h3>
+                <form onSubmit={handleChangeInfo}>
+                    <div>
+                        <h4>Email</h4>
+                        <input type="email" value={inputChangeMail} onChange={(e) => {setInputChangeMail(e.target.value)}} />
+                    </div>
+                    <div>
+                        <h4>Téléphone</h4>
+                        <input type="text" value={inputChangeTelephone} onChange={(e) => setInputChangeTelephone(e.target.value)} />
+                    </div>
+                    <div>
+                        <h4>Adresse postale</h4>
+                        <input type="text" value={inputChangeAdresse} onChange={(e) => setInputChangeAdresse(e.target.value)} />
+                    </div>
 
-                <h4>Adresse postale</h4>
-                <p>Votre adresse postale actuelle : {account.adresse_client}</p>
-                <input type="text" value={inputChangeAdresse} onChange={(e) => setInputChangeAdresse(e.target.value)} />
-                <button type="submit" className="btn-profil">Modifier</button>
+                    <button type="submit" className={"btn-profil"}>Modifier</button>
+                </form>
 
-            </form>
+                <form onSubmit={handleChangeMdp}>
+                    <h4>Mon mot de passe</h4>
+                    <input type="text" placeholder={"Nouveau mot de passe"} onChange={(e) => setInputChangeAdresse(e.target.value)} />
+                    <button type="submit" className="btn-profil">Modifier</button>
+                </form>
+            </div>
 
-            <form onSubmit={handleChangeMdp}>
-                <h4>Mon mot de passe</h4>
-                <input type="text" placeholder={"Nouveau mot de passe"} onChange={(e) => setInputChangeAdresse(e.target.value)} />
-                <button type="submit" className="btn-profil">Modifier</button>
-            </form>
-
-            <Link to={`/commande/client/:id`} className={"details-btn"}>Voir les commandes</Link>
-
+            <div className={"order-summary"}>
+                <h4>Récapitulatif</h4>
+                <div className={"order-box"}>
+                    <p>Total estimé : <span className={"total-price"}>66.00 €</span></p>
+                    <p className={"info"}>Livraison gratuite sous 2-4 jours</p>
+                </div>
+                <Link to={"/commande/client/:id"} className={"btn-detailCommande"}>Voir les commandes</Link>
+            </div>
         </div>
     );
 }

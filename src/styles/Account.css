@@ -1,0 +1,93 @@
+
+/*============= Partie Gauche ================*/
+.container-account {
+    display: flex;
+    max-width: 900px;
+    margin: 50px auto;
+    background: #fff;
+    border: 1px solid #ddd;
+    font-family: 'Inria Sans';
+}
+
+.account-form {
+    flex: 1;
+    padding: 20px;
+    border-right: 1px solid #ddd;
+}
+
+.account-form h3 {
+    font-family: "LEMON MILK";
+    font-size: 50px;
+    border-bottom: 2px solid black;
+    padding-bottom: 30px;
+    margin-bottom: 20px;
+}
+
+.account-form h4 {
+    margin-top: 15px;
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.account-form input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.btn-profil {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background: #000;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.btn-profil:hover {
+    background: #333;
+}
+
+/*===========   Partie de droite  ============*/
+
+.order-summary {
+    width: 300px;
+    padding: 20px;
+}
+
+.order-summary h4 {
+    font-size: 1.4rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.order-box {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-bottom: 10px;
+}
+
+.total-price {
+    font-weight: bold;
+    color: #000;
+    font-size: 1.2rem;
+}
+
+.btn-detailCommande {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    background: #000;
+    color: white;
+    text-decoration: none;
+}
+
+.btn-detailCommande:hover {
+    background: #333;
+}
