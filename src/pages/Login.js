@@ -46,7 +46,7 @@ function Login(props) {
 
         <div className={"container"}>
             <div className={"form-bg"}>
-                <h2 className={"title-form"}>CONNEXION</h2>
+                <h2 className={"title-form"}>CONNEXION.</h2>
                     <form onSubmit={handleSubmit}>
                         <ul>
 
