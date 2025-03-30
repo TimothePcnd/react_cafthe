@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import axios from "axios";
 import Skeleton from "react-loading-skeleton";
 import ProductCard from "../components/ProductCard";
-import '../styles/Coffee.css'
+import '../styles/Product.css'
 
 function Coffee(props) {
     const [coffees, setCoffees] = useState([]);
@@ -50,16 +50,13 @@ function Coffee(props) {
     return (
         <div>
             <div className={"top-pageCoffee"}>
-                <div className={"white"}><p>NOS CAFÉS</p></div>
-                <div className={"orange"}><p>NOS CAFÉS</p></div>
-                <div className={"black"}><p>NOS CAFÉS</p></div>
+                <div className={"white"}><h1>CAFÉ</h1></div>
+                <div className={"orange"}><h2>CAFÉ MOULU</h2></div>
+                <div className={"black"}><h2>CAFÉ EN GRAIN</h2></div>
 
             </div>
 
             <div className={"middle-page"}>
-                <div className={"filtre-content"}>
-                    <h3>Trier par</h3>
-                </div>
 
                 <div className={"product-list"}>
                     {coffees.map((produit) => (

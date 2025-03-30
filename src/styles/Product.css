@@ -1,0 +1,129 @@
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 50px;
+}
+
+.product-list a {
+    text-decoration: none;
+}
+
+
+.product-card {
+    font-family: "Inria Sans";
+    width: 358px;
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    border: solid 1px black;
+    background: #f5f5f5;
+    color: #1E1E1E;
+}
+
+.product-card img {
+    width: 180px;
+    padding-bottom: 40px;
+}
+
+.title-product {
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+.price-product {
+    font-size: 16px;
+}
+.addProduct {
+    border: none;
+    background: none;
+    text-decoration: none;
+    font-family: "Inria Sans";
+}
+
+/* ========  Page Thé ======== */
+
+.top-pageTea {
+    margin: 0;
+    height: 237px;
+    flex-shrink: 0;
+    background: radial-gradient(50% 50% at 50% 50%, #C67340 0%, #FF2E07 100%);
+    border-bottom: 1px solid black;
+}
+
+.top-pageTea h1, h2 {
+    font-family: "LEMON MILK";
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin: 0;
+}
+
+.white {
+    color: #f5f5f5;
+    margin-left: 10px;
+    margin-bottom: -33px;
+}
+
+.grey {
+    margin-left: 10px;
+    color: #D3D0CB;
+}
+
+.black {
+    color: #1E1E1E;
+    margin-left: 10px;
+    margin-top: -33px;
+}
+
+/* ========  Page Café ======== */
+
+.top-pageCoffee {
+    margin: 0;
+    height: 237px;
+    flex-shrink: 0;
+    background: rgba(187, 181, 174, 0.64);
+    border-bottom: 1px solid black;
+}
+
+.top-pageCoffee h1, h2 {
+    font-family: "LEMON MILK";
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin: 0;
+}
+
+.orange {
+    margin-left: 10px;
+    color: #F63A11;
+}
+
+/* ========  Page Accessoires ======== */
+
+.top-pageAccessories {
+    margin: 0;
+    height: 237px;
+    flex-shrink: 0;
+    background: radial-gradient(43.18% 43.18% at 50% 50%, rgba(136, 105, 77, 0.64) 0%, rgba(155, 108, 76, 0.64) 100%);
+    border-bottom: 1px solid black;
+}
+
+.top-pageAccessories h1, h2 {
+    font-family: "LEMON MILK";
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin: 0;
+}
+
+.orange {
+    margin-left: 10px;
+    color: #F63A11;
+}

@@ -6,15 +6,14 @@ function ProductCard({ produit }) {
     const { addItemToCart } = useContext(CartContext);
 
     return (
-        <div className="product-card">
-            <img src={"cafeSachet.png"} alt={"image produit"}/>
-            <h3>{produit.designation_produit}</h3>
-            <p>{produit.prix_ht_produit} €</p>
-            <Link to={`/produit/${produit.id_produit}`} className="details-btn">
-                Voir détails
-            </Link>
-            <button onClick={() => addItemToCart(produit.id_produit)}>Ajouter au panier</button>
-        </div>
+
+        <Link to={`/produit/${produit.id_produit}`}><div className="product-card">
+            <img src={`/${produit.image_url}`} alt={"image produit"}/>
+            <h3 className={"title-product"}>{produit.designation_produit}</h3>
+            <p className={"price-product"}>{produit.prix_ht_produit} €</p>
+
+            <button className={"addProduct"} onClick={() => addItemToCart(produit.id_produit)}>Ajouter au panier</button>
+        </div></Link>
     );
 }
 

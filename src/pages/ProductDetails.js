@@ -24,16 +24,16 @@ function ProductDetails() {
 
     return (
         <div className={"product-details"}>
-            <Link to={`/`} className={"details-btn"}>Retour</Link>
 
         <div className={"container-topProduit"}>
             <div className={"wrapper"}>
                 <div className={"detail-section1"}>
 
                     <div className={"img-produitMini"}>
-                        <img src={"cafeSachet.png"} alt={"photo du produit"}></img>
-                        <img src={"cafeSachet.png"} alt={"photo du produit"}></img>
-                        <img src={"cafeSachet.png"} alt={"photo du produit"}></img>
+                        <img src={`/${produit.image_url}`} alt={"image produit"}/>
+                        <img src={`/${produit.image_url}`} alt={"image produit"}/>
+                        <img src={`/${produit.image_url}`} alt={"image produit"}/>
+
                     </div>
 
                     <div className={"description-produit"}>
@@ -43,7 +43,8 @@ function ProductDetails() {
                 </div>
 
                 <div className={"detail-section2"}>
-                    <img className={"img-product"} src={"cafeSachet.png"} alt={"photo du produit"}/>
+                    <img className={"img-productDetail"} src={`/${produit.image_url}`} alt={"photo du produit"}/>
+
                 </div>
 
                 <div className={"detail-section3"}>

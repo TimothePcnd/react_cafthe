@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import axios from "axios";
 import Skeleton from "react-loading-skeleton";
 import ProductCard from "../components/ProductCard";
-import '../styles/Accessory.css'
+import '../styles/Product.css'
 
 
 function Accessory(props) {
@@ -51,16 +51,16 @@ function Accessory(props) {
     return (
         <div>
             <div className={"top-pageAccessories"}>
-                <div className={"white"}><p>NOS ACCESSOIRES</p></div>
-                <div className={"orange"}><p>NOS ACCESSOIRES</p></div>
-                <div className={"black"}><p>NOS ACCESSOIRES</p></div>
+                <div className={"white"}><h1>ACCESSOIRE</h1></div>
+                <div className={"orange"}><h2>ACCESSOIRE THÉ</h2></div>
+                <div className={"black"}><h2>ACCESSOIRE CAFÉ</h2></div>
 
             </div>
 
             <div className={"middle-page"}>
-                <div className={"filtre-content"}>
+                {/*<div className={"filtre-content"}>
                     <h3>Trier par</h3>
-                </div>
+                </div>*/}
 
                 <div className={"product-list"}>
                     {accessories.map((produit) => (
