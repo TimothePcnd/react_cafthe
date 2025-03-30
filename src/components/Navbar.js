@@ -13,12 +13,12 @@ function Navbar(props) {
     }
 
     return (
-            <nav className="navbar">
+            <header className="navbar">
 
                 <ul className="produit">
                     <li className={"li-navbar"}><Link to={`/produits/cafes`}>Café</Link></li>
                     <li className={"li-navbar"}><Link to={`/produits/thes`}>Thé</Link></li>
-                    <li className={"li-navbar"}><Link to={`/produits/accessoires`}>Accessoires</Link></li>
+                    <li className={"li-navbar"}><Link to={`/produits/accessoires`}>Accessoire</Link></li>
                 </ul>
 
                 <div className={"title-nav"}>
@@ -38,7 +38,7 @@ function Navbar(props) {
                 </ul>
 
 
-            </nav>
+            </header>
 
 
 
