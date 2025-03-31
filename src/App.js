@@ -11,10 +11,12 @@ import {AuthProvider} from "./context/AuthContext";
 import Login from "./pages/Login";
 import Account from "./pages/Account";
 import Command from "./pages/Command";
-import detailCommand from "./pages/DetailCommand";
 import DetailCommand from "./pages/DetailCommand";
 import Register from "./pages/Register";
 import Cart from "./pages/Cart";
+import Cgv from "./pages/Cgv";
+import Cgu from "./pages/Cgu";
+import Politique from "./pages/Politique";
 
 
 function App() {
@@ -34,6 +36,9 @@ function App() {
                       <Route path={"/commande/:id"} element={<DetailCommand />} />
                       <Route path={"/client/register"} element={<Register />} />
                       <Route path={"/Panier"} element={<Cart />} />
+                      <Route path={"/cgv"} element={<Cgv/>} />
+                      <Route path={"/cgu"} element={<Cgu/>} />
+                      <Route path={"/politique"} element={<Politique/>} />
                   </Route>
               </Routes>
           </Router>
