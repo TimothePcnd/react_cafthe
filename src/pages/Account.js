@@ -109,10 +109,6 @@ function Account(props) {
 
             <div className={"order-summary"}>
                 <h4>Récapitulatif</h4>
-                <div className={"order-box"}>
-                    <p>Total estimé : <span className={"total-price"}>66.00 €</span></p>
-                    <p className={"info"}>Livraison gratuite sous 2-4 jours</p>
-                </div>
                 <Link to={"/commande/client/:id"} className={"btn-detailCommande"}>Voir les commandes</Link>
             </div>
         </div>
