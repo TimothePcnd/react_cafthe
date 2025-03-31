@@ -2,7 +2,8 @@ import React, {useEffect, useState} from 'react';
 import axios from "axios";
 import Skeleton from "react-loading-skeleton";
 import ProductCard from "../components/ProductCard";
-import '../styles/Product.css'
+import '../styles/Product.css';
+import '../styles/Responsive.css';
 
 function Coffee(props) {
     const [coffees, setCoffees] = useState([]);
@@ -52,7 +53,7 @@ function Coffee(props) {
             <div className={"top-pageCoffee"}>
                 <div className={"white"}><h1>CAFÉ</h1></div>
                 <div className={"orange"}><h2>CAFÉ MOULU</h2></div>
-                <div className={"black"}><h2>CAFÉ EN GRAIN</h2></div>
+                <div className={"black"}><h2>CAFÉ GRAIN</h2></div>
 
             </div>
 
