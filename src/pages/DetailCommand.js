@@ -36,7 +36,6 @@ function DetailCommand() {
                         <p>Désignation : {value.designation_produit}</p>
                         <p>Quantité : {value.Quantite_produit_ligne_panier}</p>
                         <p>Conditionnement : {value.designation_produit}</p>
-                        <p>Prix unitaire TTC : {value.Prix_bitaire_produit_ligne}</p>
                         <p>Prix Total TTC: {value.Prix_unitaire_produit_ligne * value.Quantite_produit_ligne_panier} €</p>
                     </div>)
                 )}
