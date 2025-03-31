@@ -1,0 +1,16 @@
+.container-confidentiality {
+    padding: 50px;
+}
+.container-confidentiality p, h3 {
+    font-family: "Inria Sans";
+}
+
+.top-confidentiality h1 {
+    font-family: Vogue;
+    font-size: 35px;
+}
+
+.content-confidentiality h2 {
+    font-family: "LEMON MILK";
+    font-size: 20px;
+}
