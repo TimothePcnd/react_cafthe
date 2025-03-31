@@ -5,8 +5,8 @@ import '../styles/Footer.css'
 function Footer(props) {
     return (
         <footer>
-            <div className={"Container"}>
-                <div className={"section1"}>
+            <div className={"container-footer"}>
+                <div className={"section-footer"}>
                     <h3>Contact</h3>
                     <ul className={"list-section"}>
                         <li><p>10 Av de la République, Blois</p></li>
@@ -16,21 +16,23 @@ function Footer(props) {
 
                 </div>
 
-                <div className={"section2"}>
+                <div className={"section-footer"}>
                     <h3>Page du site</h3>
                     <ul className={"list-section"}>
                         <li><p><Link to={`/produits/cafes`}>Café</Link></p></li>
                         <li><p><Link to={`/produits/thes`}>Thé</Link></p></li>
-                        <li><p><Link to={`/produits/accessoires`}>Accessoires</Link></p></li>
+                        <li><p><Link to={`/produits/accessoires`}>Accessoire</Link></p></li>
                     </ul>
 
                 </div>
 
-                <div className={"section3"}>
+                <div className={"section-footer"}>
                     <h3>Sécurité Confidentialité</h3>
                     <ul className={"list-section"}>
-                        <li><p>Mentions légales</p></li>
-                        <li><p>Conditions générales de vente></p></li>
+                        <li><p><Link to={`/cgv`}>Conditions générales de vente</Link></p></li>
+                        <li><p><Link to={`/cgu`}>Conditions générales d'utilisation</Link></p></li>
+                        <li><p><Link to={`/politique`}>Politique de Confidentialité</Link></p></li>
+
                     </ul>
 
 
@@ -39,7 +41,7 @@ function Footer(props) {
             </div>
 
             <div className={"img-footer"}>
-                <img src={"caftheFooter.png"} alt={"CAFTHÉ"}></img>
+                <img src={"../../cafthe-footer.png"} alt={"CAFTHÉ"}></img>
             </div>
         </footer>
     );

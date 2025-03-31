@@ -1,0 +1,76 @@
+@media screen and (max-width: 600px) {
+
+    /*====== Home Page ======*/
+
+    .top-home {
+        display: none;
+    }
+
+    .bottom-home {
+        padding: 80px;
+    }
+
+
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /*===== Page Produit =====*/
+
+    .product-list {
+        margin: 50px 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .product-card {
+        height: 320px;
+    }
+
+    .product-card img {
+        width: 120px;
+        padding-bottom: 0;
+    }
+
+    /*===== Page Café =====*/
+
+    .top-pageCoffee {
+        height: 170px;
+    }
+
+    .top-pageCoffee h1, h2 {
+        font-size: 45px;
+        margin-bottom: 7px;
+    }
+
+    /*===== Page Thé =====*/
+
+    .top-pageTea {
+        height: 170px;
+    }
+
+    .top-pageTea h1, h2 {
+        font-size: 45px;
+        margin-bottom: 7px;
+    }
+
+    /*===== Page Accessoire =====*/
+
+    .top-pageAccessories {
+        height: 170px;
+    }
+
+    .top-pageAccessories h1, h2 {
+        font-size: 45px;
+        margin-bottom: 7px;
+    }
+
+    /*===== Footer =====*/
+
+    .container-footer {
+        display: flex;
+        flex-direction: column;
+    }
+
+}

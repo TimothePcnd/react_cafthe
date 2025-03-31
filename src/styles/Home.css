@@ -5,6 +5,8 @@
     line-height: 90%; /* 36px */
 }
 
+/* Partie header */
+
 .top-home{
     position: relative;
     background-image:url("../../public/background-home.png");
@@ -13,26 +15,6 @@
     height: 100vh;
 }
 
-.tasse-header{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    flex-shrink: 0;
-    aspect-ratio: 1 / 1;
-    z-index: 999;
-}
-
-.title-header {
-    color: #000;
-    font-family: Vogue;
-    font-size: 308px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    letter-spacing: 5px;
-
-}
 
 .title-header {
     display: flex;
@@ -46,6 +28,17 @@
     z-index: 9999;
 }
 
+.name-ProductHome {
+    font-family: Vogue;
+    font-size: 315px;
+}
+
+.tasseCafe-img {
+    position: fixed;
+}
+
+/* Partie galerie */
+
 .bottom-home {
     display: flex;
     justify-content: center;
@@ -57,11 +50,14 @@
     gap: 25px;
 }
 
+/* Image Galerie*/
+
 .img-affiche {
     width: 280px;
     height: 330px;
     flex-shrink: 0;
 }
+
 .img-product{
     width: 130px;
     height: 180px;
@@ -77,32 +73,54 @@
     padding: 55px 22px;
 }
 
+/* Div catégorie galerie */
 
+/* Div catégorie thé */
 .title-the {
     display: flex;
-    width: 254px;
-    height: 115px;
+    width: 280px;
+    height: 310px;
     flex-direction: column;
-    justify-content: flex-end;
-    flex-shrink: 0;
+    justify-content: space-between;
+    padding-left: 10px;
 }
+
+
+
+.arrow-the {
+    padding-left: 200px;
+}
+
+/* Div catégorie café */
 
 .title-cafe {
     display: flex;
-    width: 244px;
-    height: 104px;
+    width: 280px;
+    height: 310px;
     flex-direction: column;
-    justify-content: center;
-    flex-shrink: 0;
+    justify-content: flex-end;
+    padding-left: 15px;
 }
+
+/* Div catégorie accessoire */
 
 .title-accessoire {
     display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    flex-shrink: 0;
+    width: 280px;
+    height: 310px;
+    padding-top: 15px;
+    padding-left: 10px;
 }
 
+/* Nom Catégorie Produit*/
+
+.name-categorie {
+    font-size: 35px;
+    font-family: Vogue;
+    padding: 10px 0;
+    color: #1E1E1E;
+}
+/*div pour le product détail et la flèche */
 .text-product {
     display: flex;
     height: 75px;
@@ -112,7 +130,13 @@
     font-size: 14px;
 }
 
+.detail-product {
+    font-family: Vogue;
+}
 
+
+
+/* Case de la galerie */
 
 .one {
     grid-column: 1;
@@ -126,9 +150,8 @@
     width: 280px;
     height: 330px;
     background: radial-gradient(64.96% 50% at 50% 50%, rgba(179, 179, 179, 0.50) 0%, rgba(219, 219, 219, 0.48) 100%);
-
+    color: #1E1E1E;
 }
-
 
 .three {
     grid-column: 3;
@@ -152,7 +175,7 @@
     width: 280px;
     height: 330px;
     background: radial-gradient(50% 50% at 50% 45.76%, rgba(252, 182, 0, 0.68) 10%, rgba(145, 7, 14, 0.72) 100%);
-    color: whitesmoke;
+    color: #f5f5f5;
 
 }
 .six {
@@ -184,7 +207,7 @@
     width: 280px;
     height: 330px;
     background: radial-gradient(50% 50% at 50% 50%, rgba(29, 12, 4, 0.61) 0%, rgba(104, 59, 36, 0.61) 32.57%, rgba(87, 51, 26, 0.61) 100%);
-    color: whitesmoke;
+    color: #f5f5f5;
 
 }
 .ten {
@@ -195,8 +218,4 @@
     background: radial-gradient(43.18% 43.18% at 50% 50%, rgba(136, 105, 77, 0.64) 0%, rgba(155, 108, 76, 0.64) 100%);
     display: flex;
 
-}
-
-.arrow-rota {
-    rotate: 180deg;
 }

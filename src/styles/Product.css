@@ -24,6 +24,12 @@
     color: #1E1E1E;
 }
 
+.product-card a {
+    text-decoration: none;
+    color: #1E1E1E;
+    text-align: center;
+}
+
 .product-card img {
     width: 180px;
     padding-bottom: 40px;

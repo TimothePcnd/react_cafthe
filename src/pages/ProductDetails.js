@@ -49,7 +49,7 @@ function ProductDetails() {
 
                 <div className={"detail-section3"}>
                     <h3>{produit.designation_produit}</h3>
-                    <p>Prix : {produit.prix_ht_produit} €</p>
+                    <p>Prix : {produit.prix_ttc_produit} €</p>
                     <p>Conditionnement : {produit.Type_conditionnement}</p>
                     <button>Ajouter au panier</button>
                 </div>
