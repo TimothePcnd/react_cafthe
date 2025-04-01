@@ -17,31 +17,34 @@ import Cart from "./pages/Cart";
 import Cgv from "./pages/Cgv";
 import Cgu from "./pages/Cgu";
 import Politique from "./pages/Politique";
+import { CartProvider } from "./context/CartContext";
 
 
 function App() {
   return (
       <AuthProvider>
-          <Router>
-              <Routes>
-                  <Route path={"/"} element={<Layout/>}>
-                  <Route index element={<Home />} />
-                      <Route path={"produit/:id"} element={<ProductDetails/>} />
-                      <Route path={"produits/cafes"} element={<Coffee/>} />
-                      <Route path={"produits/thes"} element={<Tea/>} />
-                      <Route path={"produits/accessoires"} element={<Accessories/>} />
-                      <Route path={"login"} element={<Login />}/>
-                      <Route path={"account"} element={<Account/>}/>
-                      <Route path={"/commande/client/:id"} element={<Command />} />
-                      <Route path={"/commande/:id"} element={<DetailCommand />} />
-                      <Route path={"/client/register"} element={<Register />} />
-                      <Route path={"/Panier"} element={<Cart />} />
-                      <Route path={"/cgv"} element={<Cgv/>} />
-                      <Route path={"/cgu"} element={<Cgu/>} />
-                      <Route path={"/politique"} element={<Politique/>} />
-                  </Route>
-              </Routes>
-          </Router>
+          <CartProvider>
+              <Router>
+                  <Routes>
+                      <Route path={"/"} element={<Layout/>}>
+                      <Route index element={<Home />} />
+                          <Route path={"produit/:id"} element={<ProductDetails/>} />
+                          <Route path={"produits/cafes"} element={<Coffee/>} />
+                          <Route path={"produits/thes"} element={<Tea/>} />
+                          <Route path={"produits/accessoires"} element={<Accessories/>} />
+                          <Route path={"login"} element={<Login />}/>
+                          <Route path={"account"} element={<Account/>}/>
+                          <Route path={"/commande/client/:id"} element={<Command />} />
+                          <Route path={"/commande/:id"} element={<DetailCommand />} />
+                          <Route path={"/client/register"} element={<Register />} />
+                          <Route path={"/Panier"} element={<Cart />} />
+                          <Route path={"/cgv"} element={<Cgv/>} />
+                          <Route path={"/cgu"} element={<Cgu/>} />
+                          <Route path={"/politique"} element={<Politique/>} />
+                      </Route>
+                  </Routes>
+              </Router>
+          </CartProvider>
       </AuthProvider>
   );
 }
