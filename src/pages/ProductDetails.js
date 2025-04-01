@@ -3,10 +3,17 @@ import {Link, useParams} from "react-router-dom";
 import axios from "axios";
 import '../styles/ProductDetails.css'
 import ProductCard from "../components/ProductCard";
+import {useCart} from "../context/CartContext";
 
 function ProductDetails() {
         const {id} = useParams();
         const [produit, setProduit] = useState([]);
+
+    const { addToCart } = useCart();
+
+    const handleAddToCart = () => {
+        addToCart(produit);
+    };
 
 
     useEffect(() => {
@@ -51,7 +58,7 @@ function ProductDetails() {
                     <h3>{produit.designation_produit}</h3>
                     <p>Prix : {produit.prix_ttc_produit} €</p>
                     <p>Conditionnement : {produit.Type_conditionnement}</p>
-                    <button>Ajouter au panier</button>
+                    <button className="addProduct" onClick={handleAddToCart}>Ajouter au panier</button>
                 </div>
             </div>
 
