@@ -1,3 +1,4 @@
+/*
 import React, { use, useEffect, useState } from "react";
 import axios from "axios";
 import "../styles/Cart.css";
@@ -64,3 +65,4 @@ function LignePanier({ id, quantite, commande, Reload }) {
 }
 export default LignePanier;
 
+*/
