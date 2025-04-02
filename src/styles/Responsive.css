@@ -1,5 +1,11 @@
 @media screen and (max-width: 600px) {
 
+    /*====== Header ======*/
+
+    .navbar {
+        display: flex;
+    }
+
     /*====== Home Page ======*/
 
     .top-home {
