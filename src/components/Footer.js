@@ -41,7 +41,7 @@ function Footer(props) {
             </div>
 
             <div className={"img-footer"}>
-                <img src={"../../cafthe-footer.png"} alt={"CAFTHÉ"}></img>
+                <img src={"../../cafthe-footer.png"} alt={"Nom du site en grand"}></img>
             </div>
         </footer>
     );

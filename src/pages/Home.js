@@ -15,18 +15,18 @@ function Home(produit) {
                 <div className={"top-home"}>
                     <div className={"title-header"}>
                             <h1 className={"name-ProductHome"}>Yémonite</h1>
-                                <img className={"tasseCafe-img"} src={"tasseHeader.png"} />
+                                <img className={"tasseCafe-img"} src={"tasseHeader.png"} alt={"Image de  tasse de café"} />
                     </div>
                 </div>
 
                 <div className={"bottom-home"}>
                     <div className="wrapper">
                         <div className="one">
-                            <img className={"img-affiche"} src={"cafe1.jpg"}/>
+                            <img className={"img-affiche"} src={"cafe1.jpg"} alt={"Image de tasse de café"} />
                         </div>
 
                         <Link to={`/produit/2`}><div className="two">
-                            <img className={"img-product"} src={`/${produit.image_url}`}/>
+                            <img className={"img-product"} src={"JardinEdenSansBG.png"} alt={"image de café Jardin d'Edin"}/>
                             <div className={"text-product"}>
                                 <h3 className={"detail-product"}>Voir le produit en détails </h3>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="40" height="6" viewBox="0 0 40 6" fill="none">
@@ -49,11 +49,11 @@ function Home(produit) {
                         </div>
 
                         <div className="four">
-                            <img className={"img-affiche"} src={"tasseTea.jpg"}/>
+                            <img className={"img-affiche"} src={"tasseTea.jpg"} alt={"Image de tasse de thé"} />
                         </div>
 
                         <Link to={`/produit/1`}><div className="five">
-                            <img className={"img-product"} src={"cafeSachet.png"}/>
+                            <img className={"img-product"} src={"GyokuroKyotoSansBG.png"} alt={"image de thé Gyokuro Kyoto"}/>
                                 <div className={"text-product"}>
                                     <h3 className={"detail-product"}>Voir le produit en détails</h3>
                                         <svg xmlns="http://www.w3.org/2000/svg" width="40" height="6" viewBox="0 0 40 6" fill="none">
@@ -76,15 +76,15 @@ function Home(produit) {
                         </div>
 
                         <div className="seven">
-                            <img className={"img-affiche"} src={"bocalcafe.jpg"}/>
+                            <img className={"img-affiche"} src={"bocalcafe.jpg"} alt={"Image de grain de café"} />
                         </div>
 
                         <div className="height">
-                            <img className={"img-affiche"} src={"filtrecafe.jpg"}/>
+                            <img className={"img-affiche"} src={"filtrecafe.jpg"} alt={"Image d'un café filtré"} />
                         </div>
 
                         <Link to={`/produit/4`}><div className="nine">
-                            <img className={"img-accessoire"} src={"Theiere.png"}/>
+                            <img className={"img-accessoire"} src={"Theiere.png"} alt={"image du produit Theire"}/>
                             <div className={"text-product"}>
                                 <h3 className={"detail-product"}>Voir le produit en détails</h3>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="40" height="6" viewBox="0 0 40 6" fill="none">

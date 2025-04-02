@@ -25,7 +25,7 @@ function Header(props) {
                     </ul>
 
                     <div className={"title-nav"}>
-                        <Link to={`/`}><img src={"../../cafthe-title.png"} height={"35px"}></img></Link>
+                        <Link to={`/`}><img src={"../../cafthe-title.png"} height={"35px"} alt={"Logo du site"}></img></Link>
                     </div>
 
                     <ul className="right-ul">

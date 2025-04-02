@@ -1,8 +1,7 @@
 import React, {useEffect, useState} from 'react';
-import {Link, useParams} from "react-router-dom";
+import {useParams} from "react-router-dom";
 import axios from "axios";
 import '../styles/ProductDetails.css'
-import ProductCard from "../components/ProductCard";
 import {useCart} from "../context/CartContext";
 
 function ProductDetails() {
@@ -37,9 +36,9 @@ function ProductDetails() {
                 <div className={"detail-section1"}>
 
                     <div className={"img-produitMini"}>
-                        <img src={`/${produit.image_url}`} alt={"image produit"}/>
-                        <img src={`/${produit.image_url}`} alt={"image produit"}/>
-                        <img src={`/${produit.image_url}`} alt={"image produit"}/>
+                        <img src={`/${produit.image_url}`} alt={"image du produit"}/>
+                        <img src={`/${produit.image_url}`} alt={"image du produit"}/>
+                        <img src={`/${produit.image_url}`} alt={"image du produit"}/>
 
                     </div>
 
@@ -50,7 +49,7 @@ function ProductDetails() {
                 </div>
 
                 <div className={"detail-section2"}>
-                    <img className={"img-productDetail"} src={`/${produit.image_url}`} alt={"photo du produit"}/>
+                    <img className={"img-productDetail"} src={`/${produit.image_url}`} alt={"image du produit"}/>
 
                 </div>
 
