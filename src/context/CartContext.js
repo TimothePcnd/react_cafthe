@@ -5,6 +5,7 @@ export const CartContext = createContext();
 
 export const CartProvider = ({ children }) => {
     const [cartItems, setCartItems] = useState([]);
+    const [addMessage, setAddMessage] = useState("")
 
     // Chargement des produits du panier depuis localStorage
     useEffect(() => {
@@ -26,6 +27,7 @@ export const CartProvider = ({ children }) => {
 
     const addToCart = (item) => {
         setCartItems((prevItems) => [...prevItems, item]);
+
     };
 
     const removeFromCart = (itemId) => {
@@ -34,16 +36,19 @@ export const CartProvider = ({ children }) => {
 
 
     const updateQuantity = (itemId, quantity) => {
-        if (quantity < 1) return;
-
-        setCartItems((prevItems) =>
-            prevItems.map((item) =>
-                item.id_produit === itemId
-                    ? { ...item, Quantite_produit_ligne_panier: quantity }
-                    : item
-            )
-        );
+        if (quantity < 1) {
+            removeFromCart(itemId);
+        } else {
+            setCartItems((prevItems) =>
+                prevItems.map((item) =>
+                    item.id_produit === itemId
+                        ? { ...item, Quantite_produit_ligne_panier: quantity }
+                        : item
+                )
+            );
+        }
     };
+
 
     const clearCart = () => {
         setCartItems([]);
