@@ -18,6 +18,7 @@ import Cgv from "./pages/Cgv";
 import Cgu from "./pages/Cgu";
 import Politique from "./pages/Politique";
 import { CartProvider } from "./context/CartContext";
+import MentionsLegales from "./pages/MentionsLegales";
 
 
 function App() {
@@ -41,6 +42,7 @@ function App() {
                           <Route path={"/cgv"} element={<Cgv/>} />
                           <Route path={"/cgu"} element={<Cgu/>} />
                           <Route path={"/politique"} element={<Politique/>} />
+                          <Route path={"/mentionsLegales"} element={<MentionsLegales/>} />
                       </Route>
                   </Routes>
               </Router>

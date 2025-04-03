@@ -38,9 +38,9 @@ function Header(props) {
                                     </button>
                                     {menuOpen && (
                                         <ul className="mobile-menu">
-                                            <li><Link to="/produits/cafes">Café</Link></li>
-                                            <li><Link to="/produits/thes">Thé</Link></li>
-                                            <li><Link to="/produits/accessoires">Accessoire</Link></li>
+                                            <li><Link to="/produits/cafes">Cafés</Link></li>
+                                            <li><Link to="/produits/thes">Thés</Link></li>
+                                            <li><Link to="/produits/accessoires">Accessoires</Link></li>
                                             <li><Link to="/Panier">Panier ({cartItems.length})</Link></li>
                                             {isAuthenticated ? (
                                                 <>
@@ -57,9 +57,9 @@ function Header(props) {
                                 // Desktop Menu
                                 <>
                             <ul className="produit">
-                                <li className={"li-navbar"}><Link to={`/produits/cafes`}><p className={"name-PageNav"}>Café</p></Link></li>
-                                <li className={"li-navbar"}><Link to={`/produits/thes`}><p className={"name-PageNav"}>Thé</p></Link></li>
-                                <li className={"li-navbar"}><Link to={`/produits/accessoires`}><p className={"name-PageNav"}>Accessoire</p></Link></li>
+                                <li className={"li-navbar"}><Link to={`/produits/cafes`}><p className={"name-PageNav"}>Cafés</p></Link></li>
+                                <li className={"li-navbar"}><Link to={`/produits/thes`}><p className={"name-PageNav"}>Thés</p></Link></li>
+                                <li className={"li-navbar"}><Link to={`/produits/accessoires`}><p className={"name-PageNav"}>Accessoires</p></Link></li>
                             </ul>
 
                             <div className={"title-nav"}>

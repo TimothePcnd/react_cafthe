@@ -19,9 +19,9 @@ function Footer(props) {
                 <div className={"section-footer"}>
                     <h3>Page du site</h3>
                     <ul className={"list-section"}>
-                        <li><p><Link to={`/produits/cafes`}>Café</Link></p></li>
-                        <li><p><Link to={`/produits/thes`}>Thé</Link></p></li>
-                        <li><p><Link to={`/produits/accessoires`}>Accessoire</Link></p></li>
+                        <li><p><Link to={`/produits/cafes`}>Cafés</Link></p></li>
+                        <li><p><Link to={`/produits/thes`}>Thés</Link></p></li>
+                        <li><p><Link to={`/produits/accessoires`}>Accessoires</Link></p></li>
                     </ul>
 
                 </div>
@@ -32,6 +32,7 @@ function Footer(props) {
                         <li><p><Link to={`/cgv`}>Conditions générales de vente</Link></p></li>
                         <li><p><Link to={`/cgu`}>Conditions générales d'utilisation</Link></p></li>
                         <li><p><Link to={`/politique`}>Politique de Confidentialité</Link></p></li>
+                        <li><p><Link to={`/mentionsLegales`}>Mentions Légales</Link></p></li>
 
                     </ul>
 
