@@ -1,7 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import {useParams} from "react-router-dom";
 import axios from "axios";
-import '../styles/ProductDetails.css'
+import '../styles/ProductDetails.css';
+import '../styles/Responsive.css';
 import {useCart} from "../context/CartContext";
 
 function ProductDetails() {
@@ -32,7 +33,7 @@ function ProductDetails() {
         <div className={"product-details"}>
 
         <div className={"container-topProduit"}>
-            <div className={"wrapper"}>
+            <div className={"wrapper-productDetails"}>
                 <div className={"detail-section1"}>
 
                     <div className={"img-produitMini"}>
