@@ -71,7 +71,7 @@ function Login(props) {
                         </ul>
 
                         <div className={"addAccount"}>
-                            <Link to={`/client/register`} className={"details-btn"}>Crée un compte</Link>
+                            <Link to={`/client/register`} className={"details-btn"}>Créer un compte</Link>
                         </div>
                     </form>
             </div>
