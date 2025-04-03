@@ -1,27 +1,3 @@
-.container {
-    margin: 100px 50px;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-}
-
-.form-bg {
-    width: 50%;
-    border: 2px solid black;
-    padding: 20px;
-    background-color: white;
-    font-family: "Inria Sans";
-    text-transform: uppercase;
-}
-
-.title-form {
-    font-family: "LEMON MILK";
-    font-size: 50px;
-    border-bottom: 2px solid black;
-    padding-bottom: 30px;
-    margin-bottom: 20px;
-}
-
 form ul {
     list-style: none;
     padding: 0;
@@ -48,6 +24,40 @@ input {
     font-size: 16px;
     box-sizing: border-box;
 }
+
+.container {
+    margin: 100px 50px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.form-bg {
+    width: 50%;
+    border: 2px solid black;
+    padding: 20px;
+    background-color: white;
+    font-family: "Inria Sans";
+    text-transform: uppercase;
+}
+
+.message-obligatory {
+    text-align: right;
+    font-size: 14px;
+}
+
+.title-form {
+    font-family: "LEMON MILK";
+    font-size: 50px;
+    border-bottom: 2px solid black;
+    padding-bottom: 30px;
+    margin-bottom: 20px;
+}
+
+.obligatory {
+    color: #ff0000;
+}
+
 
 .SeConnecter {
     font-family: "Inria Sans";

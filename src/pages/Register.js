@@ -97,57 +97,65 @@ function Register(props) {
             <div className={"form-bg"}>
                 <h2 className={"title-form"}>Créer un compte</h2>
                 <form onSubmit={handleSubmit}>
+                    <p className={"message-obligatory"}><span className={"obligatory"}>*</span> champs obligatoires</p>
                     <ul>
                         <li>
-                            <label htmlFor="name">Nom Prénom</label>
+
+                            <label htmlFor="name">Prénom Nom <span className={"obligatory"}>*</span></label>
                             <input type="text"
                                    id="name"
                                    value={nom}
+                                   placeholder={"Votre prénom et nom"}
                                    onChange={(e) => setNom(e.target.value)}
                                    required
                             />
                         </li>
                         <li>
-                            <label htmlFor="mail">Email</label>
+                            <label htmlFor="mail">Email <span className={"obligatory"}>*</span></label>
                             <input type="email"
                                    id="mail"
                                    value={email}
+                                   placeholder={"Votre adresse mail"}
                                    onChange={(e) => setEmail(e.target.value)}
                                    required
                             />
                         </li>
                         <li>
-                            <label htmlFor="password">Mot de passe</label>
+                            <label htmlFor="password">Mot de passe <span className={"obligatory"}>*</span></label>
                             <input type="password"
                                    id="password"
                                    value={mdp_one}
+                                   placeholder={"Votre mot de passe"}
                                    onChange={(e) => setMdp_one(e.target.value)}
                                    required
                             />
                         </li>
                         <li>
-                            <label htmlFor="confirm-password">Confirmer le mot de passe</label>
+                            <label htmlFor="confirm-password">Confirmer le mot de passe <span className={"obligatory"}>*</span></label>
                             <input type="password"
                                    id="confirm-password"
                                    value={mdp_two}
+                                   placeholder={"Confirmation du mot de passe"}
                                    onChange={(e) => setMdp_two(e.target.value)}
                                    required
                             />
                         </li>
                         <li>
-                            <label htmlFor="address">Adresse</label>
+                            <label htmlFor="address">Adresse <span className={"obligatory"}>*</span></label>
                             <input type="text"
                                    id="address"
                                    value={adresse}
+                                   placeholder={"Votre adresse postale"}
                                    onChange={(e) => setAdresse(e.target.value)}
                                    required
                             />
                         </li>
                         <li>
-                            <label htmlFor="telephone">N° de téléphone</label>
+                            <label htmlFor="telephone">N° de téléphone <span className={"obligatory"}>*</span></label>
                             <input type="tel"
                                    id="telephone"
                                    value={telephone}
+                                   placeholder={"Votre numéro de téléphone"}
                                    onChange={(e) => setTelephone(e.target.value)}
                                    required
                             />

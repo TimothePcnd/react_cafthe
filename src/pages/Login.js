@@ -48,21 +48,24 @@ function Login(props) {
             <div className={"form-bg"}>
                 <h2 className={"title-form"}>CONNEXION.</h2>
                     <form onSubmit={handleSubmit}>
+                        <p className={"message-obligatory"}><span className={"obligatory"}>*</span> champs obligatoires</p>
                         <ul>
 
                             <li>
 
-                                <label htmlFor="mail">Email</label>
+                                <label htmlFor="mail">Email <span className={"obligatory"}>*</span></label>
                                 <input type="email"
                                        value={email}
+                                       placeholder={"Votre adresse mail"}
                                        onChange={(e) => setEmail(e.target.value)}
                                         />
                             </li>
 
                             <li>
-                                <label htmlFor="name">Password</label>
+                                <label htmlFor="name">Password <span className={"obligatory"}>*</span></label>
                                 <input type="password"
                                        value={mdp}
+                                       placeholder={"Votre mot de passe"}
                                        onChange={(e) => setMdp(e.target.value)}
                                        />
                             </li>
