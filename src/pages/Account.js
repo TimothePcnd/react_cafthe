@@ -22,12 +22,10 @@ function Account(props) {
             setLoading(false);
             return;
         }
-
         const fetchAccount = async () => {
             try {
                 const response = await axios.get(`${process.env.REACT_APP_API_URL}/api/client/${user.id}`);
                 setAccount(response.data);
-
                 setInputChangeMail (response.data.Mail_client)
                 setInputChangeTelephone (response.data.Telephone_client)
                 setInputChangeAdresse (response.data.adresse_client)
@@ -38,12 +36,9 @@ function Account(props) {
                 setLoading(false);
             }
         };
-
-        console.log(user)
         void fetchAccount();
     }, [user?.id]);
 
-    console.log(account)
 
     const handleChangeInfo = async (e) => {
         e.preventDefault();
