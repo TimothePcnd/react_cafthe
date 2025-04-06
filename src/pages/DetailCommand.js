@@ -7,7 +7,7 @@ function DetailCommand() {
 
     const [detail, setDetail] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
-    console.log(detail)
+
     useEffect(() => {
         const fetchProduits = async () => {
             try {
