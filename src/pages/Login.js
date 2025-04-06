@@ -12,9 +12,30 @@ function Login(props) {
     const [mdp, setMdp] = useState("")
     const [errorMsg, setErrorMsg] = useState("")
 
+    const validateForm = () => {
+        // Validation de l'email avec une expression régulière simple
+        const emailVerification = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailVerification.test(email)) {
+            setErrorMsg("Veuillez entrer une adresse email valide.");
+            return false;
+        }
+
+        // Vérification que le champ mdp doit contenir minimum 6 caractères
+        if (mdp.length < 6) {
+            setErrorMsg("Le mot de passe doit contenir au moins 6 caractères.");
+            return false;
+        }
+
+        return true;
+    };
+
     const handleSubmit = async (e) => { //fonction asynchrone
         e.preventDefault();
         setErrorMsg("")
+
+        if (!validateForm()) {
+            return;
+        }
 
         try {
             const response = await axios.post(`${process.env.REACT_APP_API_URL}/api/login`,
@@ -39,7 +60,9 @@ function Login(props) {
             } else {
                 setErrorMsg("Erreur");
             }
+
         }
+
     };
 
     return (
