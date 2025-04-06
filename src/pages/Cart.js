@@ -1,13 +1,29 @@
 import React, { useEffect, useState } from "react";
 import "../styles/Cart.css";
 import { useCart } from "../context/CartContext";
+import { useNavigate} from "react-router-dom";
 
 function Cart(produit) {
+    const user = JSON.parse(localStorage.getItem("user"));
+    const navigate = useNavigate();
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
+
     const [panier, setPanier] = useState([]);
-    const { cartItems, removeFromCart, updateQuantity } = useCart();
+    const { cartItems, removeFromCart, updateQuantity, clearCart } = useCart();
     const [total, setTotal] = useState(0);
 
+    const [popUpMessage, setPopUpMessage] = useState(false);
+
     useEffect(() => {
+
+        if (!user) {
+            navigate("/login");
+            setError("Utilisateur non authentifié");
+            setLoading(false);
+            return;
+        }
+
         // Calculer le total en tenant compte de la quantité
         const calculerTotal = () => {
             const total = cartItems.reduce((sum, item) => {
@@ -34,6 +50,22 @@ function Cart(produit) {
     const handleQuantityChange = (produitID, newQuantity) => {
         updateQuantity(produitID, newQuantity);
     };
+
+    const handlePasserCommande = () => {
+        if (cartItems.length > 0) {
+            setPopUpMessage(true);
+
+            setTimeout(() => {
+                clearCart();
+                setPopUpMessage(false);
+                navigate("/");
+            }, 2000);
+
+
+        } else {
+            alert("Votre panier est vide !");
+        }
+    }
 
     return (
         <div className={"cart-container"}>
@@ -83,7 +115,12 @@ function Cart(produit) {
                         </div>
                     ))}
                     <h3>Total: {total.toFixed(2)} €</h3>
-                    <button className={"cart-button"}>Passer la commande</button>
+                    <button className={"cart-button"} onClick={handlePasserCommande}>Passer la commande</button>
+                    {popUpMessage && (
+                        <div className="pop-up">
+                            <p>Votre commande a été ajouté validée, à bientôt</p>
+                        </div>
+                    )}
                 </div>
             )}
         </div>
