@@ -10,7 +10,7 @@ import {Link} from "react-router-dom";
 function Home(produit) {
     return (
 
-            <div className={"home"}>
+            <main className={"home"}>
 
                 <div className={"top-home"}>
                     <div className={"title-header"}>
@@ -107,7 +107,7 @@ function Home(produit) {
                     </div>
                 </div>
 
-    </div>)
+    </main>)
 
 }
 
