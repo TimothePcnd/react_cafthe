@@ -46,7 +46,7 @@ function Coffee(props) {
             </div>
         )
     }
-    //console.log(coffees)
+
 
     return (
         <div>

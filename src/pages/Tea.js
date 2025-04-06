@@ -45,7 +45,7 @@ function Tea(props) {
             </div>
         )
     }
-    //console.log(teas)
+
 
     return (
         <div>

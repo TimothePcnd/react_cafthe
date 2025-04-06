@@ -46,7 +46,7 @@ function Accessory(props) {
             </div>
         )
     }
-    //console.log(accessories)
+
 
     return (
         <div>
